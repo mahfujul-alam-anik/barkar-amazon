@@ -17,7 +17,7 @@ const SectionCard = ({
       style={{ backgroundColor: bgColor, flexDirection: dir }}
     >
       <div className="w-1/2 max-md:w-full">
-        <Image
+        <img
           src={`/images/${image}`}
           alt="Info"
           width={545}

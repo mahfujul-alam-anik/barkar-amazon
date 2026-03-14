@@ -13,9 +13,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata = {
-  title: "Online Banking, Mortgages, Personal Loans, Investing | Citi.com",
-  description:
-    "Open a bank account, apply for a personal loan or home equity line of credit, or start investing in your financial future with Citi. Learn more about our range of services.",
+  title: "Amazon.com. Spend less, Smile more.",
+  description: "Amazon.com. Spend less, Smile more.",
 };
 
 export default function RootLayout({ children }) {

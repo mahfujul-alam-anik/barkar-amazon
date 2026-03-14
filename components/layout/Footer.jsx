@@ -144,7 +144,7 @@ export default function EcommerceFooter() {
         {/* Brand placeholder */}
         <div className="flex min-w-[180px] items-center justify-center">
           <div className="flex flex-col items-center leading-none">
-            <Image
+            <img
               src="/images/Amazon-Logo-White-Transparent.png"
               alt="Amazon"
               width={80}

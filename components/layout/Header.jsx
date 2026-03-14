@@ -30,7 +30,7 @@ export default function Header() {
         {/* Brand */}
         <div className="flex min-w-fit items-center gap-3 rounded-md px-2 py-2 hover:outline hover:outline-1 hover:outline-white/40">
           <div className="flex flex-col leading-none">
-            <Image
+            <img
               src="/images/Amazon-Logo-White-Transparent.png"
               alt="Amazon"
               width={100}

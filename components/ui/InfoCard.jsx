@@ -6,7 +6,7 @@ const InfoCard = ({ subTitle, title, image, details }) => {
     <div className="rounded-lg p-4 col-flex justify-between w-[400px] h-[500px] border border-gray-300">
       <div>
         <p className="text-sm font-light pb-2">{subTitle}</p>
-        <Image
+        <img
           src={`/images/${image}`}
           alt="Info"
           width={370}
